@@ -1,0 +1,39 @@
+body {
+    background-image: url(../images/background.jpg);
+}
+
+.item-a {
+    grid-area: header;
+    background-color: #bc56a3
+}
+
+.item-b {
+    grid-area: main;
+    background-color: yellow
+}
+
+.item-c {
+    grid-area: sidebar;
+    background-color: aqua
+}
+
+.item-d {
+    grid-area: footer;
+    background-color: darkgreen
+}
+
+
+.container {
+    display: grid;
+    max-width: 1024px;
+    background-color: darkblue;
+
+    grid-template-rows:    1fr 1fr 1fr;
+    grid-template-columns: 3fr 1fr;
+
+    grid-template-areas: "header  header"
+                         "main    sidebar"
+                         "footer  footer";
+
+    margin: 40px auto;
+}
