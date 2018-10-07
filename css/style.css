@@ -14,7 +14,7 @@ body {
   grid-template-rows: auto 1fr 80px;
   grid-template-columns: 1fr minmax(auto, 1024px) 1fr;
   grid-template-areas: "header  header  header"
-                       "  .      main      .  gti"
+                       "  .      main      .  "
                        "footer  footer  footer";
   min-height: 100%;
 
