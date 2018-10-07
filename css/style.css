@@ -3,6 +3,7 @@
   padding: 0;
   border: 0;
   outline: none;
+
 }
 html {
   height: 100%;
@@ -11,6 +12,8 @@ html {
 body {
   min-height: 100%;
   background-image: url(../images/bg.jpg);
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
 
   display: grid;
   grid-template-rows: 120px 1fr 80px;
@@ -24,7 +27,8 @@ body {
   grid-area: header;
   background-color: rgba(250, 121, 226, 0.7);
   text-align: center;
-
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 150%;
 }
 
 .item-b {
@@ -33,10 +37,9 @@ body {
 
 }
 
-h1{
+h1 {
   text-align: center;
 }
-
 .item-c {
   grid-area: footer;
   background-color: rgba(100, 0, 255, 0.5);
@@ -60,11 +63,14 @@ img {
 
 ul.hr li{
   display: inline;
+  margin-right: 30px;
+  white-space: nowrap;
 }
 
 ul.hr a{
-  color: green;
+  color: darkblue;
   text-decoration: none;
+
 }
 
 section{
@@ -75,8 +81,16 @@ section{
   border: 1px solid black;
   border-radius: 7px;
   padding-top: 10px;
+
 }
 .logo{
   max-width: 1024px;
   margin: auto;
+}
+
+.img-logo{
+  margin: 0 20px;
+}
+pre{
+  font-family: "Courier New", "Lucida Console", monospace;
 }
