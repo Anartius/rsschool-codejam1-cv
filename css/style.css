@@ -3,62 +3,45 @@
   padding: 0;
   border: 0;
   outline: none;
-
 }
+
 html {
   height: 100%;
 }
 
 body {
-  min-height: 100%;
-  background-image: url(../images/bg.jpg);
-
-  font-family: Georgia, 'Times New Roman', Times, serif;
-
   display: grid;
-  grid-template-rows: 120px 1fr 80px;
+  grid-template-rows: auto 1fr 80px;
   grid-template-columns: 1fr minmax(auto, 1024px) 1fr;
   grid-template-areas: "header  header  header"
-                       " .      main     . "
+                       "  .      main      .  gti"
                        "footer  footer  footer";
-}
+  min-height: 100%;
 
-.item-a {
-  grid-area: header;
-  background-color: rgba(250, 121, 226, 0.7);
-  text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 150%;
+
+  background-image: url(../images/bg.jpg);
 }
 
-.item-b {
-  grid-area: main;
-  background-color: rgba(200, 200, 255, 0.7);
-
+section{
+  margin: 20px;
 }
 
 h1 {
   text-align: center;
 }
-.item-c {
-  grid-area: footer;
-  background-color: rgba(100, 0, 255, 0.5);
-  align-content: center;
-  text-align: center;
-}
-
-.grid-item {
-  margin: 10px;
-  border: 2px solid #333;
-  border-color: hsla(0, 0%, 0%, 0.5);
-  border-radius: 5px;
-  padding: 20px;
-}
 
 img {
   float: left;
   margin: 0 20px 20px 0;
+}
 
+pre{
+  font-family: "Courier New", "Lucida Console", monospace;
+}
+
+p{
+  padding: 10px;
 }
 
 ul.hr li{
@@ -68,53 +51,77 @@ ul.hr li{
 }
 
 ul.hr a{
-  color: darkblue;
   text-decoration: none;
-
+  color: darkblue;
 }
 
-section{
-  margin: 20px;
+.grid-item {
+  padding: 20px;
+  margin: 10px;
+
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
 }
+
+.item-a {
+  grid-area: header;
+
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 150%;
+
+  background-color: rgba(250, 121, 226, 0.7);
+}
+
+.item-b {
+  grid-area: main;
+
+  background-color: rgba(200, 200, 255, 0.7);
+}
+
+.item-c {
+  grid-area: footer;
+  align-content: center;
+
+  text-align: center;
+
+  background-color: rgba(100, 0, 255, 0.5);
+}
+
 .code {
+  padding-top: 10px;
+
   background-color: blanchedalmond;
   border: 1px solid black;
   border-radius: 7px;
-  padding-top: 10px;
-
 }
+
 .logo{
+  display: flex;
+  flex-wrap: nowrap;
   max-width: 1024px;
   margin: auto;
+  padding-left: 30px;
 }
 
-.img-logo{
-  margin: 10px 20px;
-}
-pre{
-  font-family: "Courier New", "Lucida Console", monospace;
-}
 @media (max-width: 1080px){
-
-  body {
-    grid-template-rows: 145px 1fr 80px;
-  }
   .img-logo {
-    margin: 20px 20px;
+    margin: auto 20px;
   }
-
 }
-@media (max-width: 900px){
 
+@media (max-width: 900px){
+  .img-logo {
+    margin: auto 20px;
+  }
+  .logo{
+    flex-wrap: wrap;
+  }
   ul.hr li{
     display: block;
   }
-  body {
-    grid-template-rows: 280px 1fr 80px;
-  }
-
-  .img-logo{
-    display: none;
-
-  }
 }
+
+
+
