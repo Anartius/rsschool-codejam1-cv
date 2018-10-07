@@ -13,30 +13,35 @@ body {
   background-image: url(../images/bg.jpg);
 
   display: grid;
-
-  grid-template-rows: 80px 1fr 80px;
+  grid-template-rows: 120px 1fr 80px;
   grid-template-columns: 1fr minmax(auto, 1024px) 1fr;
   grid-template-areas: "header  header  header"
                        " .      main     . "
                        "footer  footer  footer";
-  justify-content: center;
-  justify-self: center;
 }
 
 .item-a {
   grid-area: header;
-  background-color: #bc56a3;
-  opacity: 0.8;
+  background-color: rgba(250, 121, 226, 0.7);
+  text-align: center;
+
 }
 
 .item-b {
   grid-area: main;
   background-color: rgba(200, 200, 255, 0.7);
+
+}
+
+h1{
+  text-align: center;
 }
 
 .item-c {
   grid-area: footer;
-  background-color: rgba(100, 0, 255, 0.7);
+  background-color: rgba(100, 0, 255, 0.5);
+  align-content: center;
+  text-align: center;
 }
 
 .grid-item {
@@ -50,12 +55,16 @@ body {
 img {
   float: left;
   margin: 0 20px 20px 0;
-  width: 200px;
-  height: 300px;
+
 }
 
 ul.hr li{
   display: inline;
+}
+
+ul.hr a{
+  color: green;
+  text-decoration: none;
 }
 
 section{
@@ -66,4 +75,8 @@ section{
   border: 1px solid black;
   border-radius: 7px;
   padding-top: 10px;
+}
+.logo{
+  max-width: 1024px;
+  margin: auto;
 }
