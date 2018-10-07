@@ -89,8 +89,32 @@ section{
 }
 
 .img-logo{
-  margin: 0 20px;
+  margin: 10px 20px;
 }
 pre{
   font-family: "Courier New", "Lucida Console", monospace;
+}
+@media (max-width: 1080px){
+
+  body {
+    grid-template-rows: 145px 1fr 80px;
+  }
+  .img-logo {
+    margin: 20px 20px;
+  }
+
+}
+@media (max-width: 900px){
+
+  ul.hr li{
+    display: block;
+  }
+  body {
+    grid-template-rows: 280px 1fr 80px;
+  }
+
+  .img-logo{
+    display: none;
+
+  }
 }
